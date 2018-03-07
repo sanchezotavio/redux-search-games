@@ -18,14 +18,27 @@ const detailStyle = {
     paddingRight: '4px',
 }
 
-const title ={
+const title = {
     margin: 0,
     padding: 0
 }
 
-const imgStyle ={
+const imgStyle = {
     width: '100%',
     maxWidth: '180px'
+}
+
+const cloud = (game) => {
+    if (game.cover) {
+        if (game.cover.cloudinary_id) {
+            return `https://images.igdb.com/igdb/image/upload/t_screenshot_med_2x/${game.cover.cloudinary_id}.jpg`
+        }
+        else {
+            return ''
+        }
+    } else {
+        return ''
+    }
 }
 
 class ListDetail extends Component {
@@ -44,7 +57,7 @@ class ListDetail extends Component {
             <Grid item style={detailStyle} xs={12}>
                 <Paper style={detailStyle}>
                     <Grid item lg={4} sm={12}>
-                        <img src={`https://images.igdb.com/igdb/image/upload/t_cover_big_2x/${this.props.game.cover.cloudinary_id}.jpg`} style={imgStyle} alt={this.props.game.name} title={this.props.game.name} />
+                        <img src={cloud(this.props.game)} style={imgStyle} alt={this.props.game.name} title={this.props.game.name} />
                     </Grid>
                     <Grid item lg={8} sm={12}>
                         <h4 style={title}>{this.props.game.name}</h4>
