@@ -1,18 +1,24 @@
 # Redux Search Game
-    
-## Configuração e instalação
 
-Após clonar o projeto para o seu Desktop, execute o seguinte comanda para instalar todas as dependências do projeto:
-```
-npm install 
-```
+##  Installation
 
-Após todas as dependências serem instaladas, rode a aplicação através do seguinte comando:
-```
-npm run start
+```bash
+npm install
 ```
 
-Acesse a aplicação no endereço:
-localhost:5000/
+##  Usage
+
+```bash
+npm start
+```
+
+Project is running at http://localhost:5000/
+
+##  Resources
+
+* [reactjs.org](https://reactjs.org/)
+* [redux.js.org](https://redux.js.org/)
+
+
 
 
